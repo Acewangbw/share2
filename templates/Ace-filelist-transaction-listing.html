@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block bread %}文件列表{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <h5 class="text-light font-medium m-t-10">共有文件<i class="fa fa-angle-up font-bold"></i></h5>
+                    <h3 class="m-t-0 text-light font-medium">{{ countfile }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-purple">
+                <div class="card-body">
+                    <h5 class="text-light font-medium m-t-10">总下载量<i class="fa fa-angle-down font-bold"></i></h5>
+                    <h3 class="m-t-0 text-light font-medium">6153</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <h5 class="text-light font-medium m-t-10">当天上传文件<i class="fa fa-angle-up font-bold"></i></h5>
+                    <h3 class="m-t-0 text-light font-medium">16</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark">
+                <div class="card-body">
+                    <h5 class="text-light font-medium m-t-10">当天下载数量<i class="fa fa-angle-down font-bold"></i></h5>
+                    <h3 class="m-t-0 text-light font-medium">15</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <h3 class="card-title">文件下载</h3>
+        {#                                            <div class="ml-auto">#}
+        {#                                                <button type="button" class="btn btn-info">View All</button>#}
+        {#                                            </div>#}
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <div class="blocks-table txn-table" >
+                                <table class="table table-padded m-b-0">
+                                    <thead>
+                                        <tr class="header">
+                                            <th>
+                                                <div>文件</div>
+                                            </th>
+                                            <th class="hidden-xs">
+                                                <div class=" hidden-xs">下载次数</div>
+                                            </th>
+                                            <th class="hidden-xs">
+                                                <div class=" hidden-xs">上传者</div>
+                                            </th>
+                                            <th>
+                                                <div>用于</div>
+                                            </th>
+                                            <th>&nbsp;
+                                                <div>操作</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for file in allfile %}
+                                        <tr id={{ file.id }}>
+                                            <td>
+                                                <div class="d-flex no-block">
+                                                    <div class="text-ellipsis">
+        {#                                                                    <a onclick="countclick()" href="{{ MEDIA_URL }}{{ file.models_Fileupload }}" download="">{{ file.models_Filename }}</a>#}
+                                                        <a onclick="countclick()" href="{{ MEDIA_URL }}{{ file.models_Fileupload }}" download="">{{ file.models_Filename }}</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex no-block">
+                                                    <div class="d-flex no-block">
+                                                        <div class="gen-content font-medium">描述：</div>
+                                                        <div class="text-ellipsis">{{ file.models_Filedes }}</div>
+                                                    </div>
+        {#                                                                <div class="d-flex no-block">#}
+        {#                                                                    <div class="gen-content font-medium">To</div>#}
+        {#                                                                    <div class="text-ellipsis"> xd9dd3777b6c776438fd0sdg930dfdsg0</div>#}
+        {#                                                                </div>#}
+                                                </div>
+                                            </td>
+                                            <td class=" hidden-xs">
+                                                <div id="dowanload_count" class="text-success"></div>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <div>Ace</div>
+                                            </td>
+                                            <td valign="middle">
+                                                <div class="reward text-ellipsis">
+                                                    {{ file.models_Fileusedfor }}
+                                                </div>
+                                            </td>
+                                            <td>
+        {#TODO                                                            判断用户是否登录#}
+
+                                                {% if request.session.user.is_admin == 1 %}
+                                                    <a href="javascript:post('/sharefile/filelist/',{op:'del',file_id:'{{file.id}}'})" onclick="return p_del()">删除</a>
+                                                {% endif %}
+                                            </td>
+        {#                                                            <a name="delete" href="javascript:" onclick="delete_file(this, {{ file.id }})" ><span class="glyphicon glyphicon-trash" style="margin-left:20px;"></span>删除</a>#}
+        {#                                                            <a name="delete" href="javascript:" onclick="DeleteFile(this, {{ file.id }})"><span class="glyphicon glyphicon-trash" style="margin-left:20px;"></span></a>#}
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                {% csrf_token %}
+                                </table>
+                            </div>
+                        </div>
+        {#                                    <div class="text-center p-t-20 p-b-20">#}
+        {#                                        <ul class="list-inline font-12">#}
+        {#                                            <li class="text-success"><i class="fa fa-check text-success"></i> Success</li>#}
+        {#                                            <li class="text-danger"><i class="fa fa-times text-danger"></i> Failed</li>#}
+        {#                                        </ul>#}
+        {#                                    </div>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'node_modules/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'node_modules/popper/popper.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/perfect-scrollbar.jquery.min.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'node_modules/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+    <script src="{% static 'node_modules/sparkline/jquery.sparkline.min.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <!-- jQuery peity -->
+    <script src="{% static 'node_modules/peity/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'node_modules/peity/jquery.peity.init.js' %}"></script>
+
+    <script type="text/javascript">
+            var i=0;
+            function countclick()
+            {
+               i++;
+               document.getElementById("dowanload_count").innerHTML=i+"";
+            }
+     </script>
+    <script type="text/javascript">
+            {#<script language="javascript">#}
+
+        function p_del() {
+        var msg="您真的确定要删除吗？";
+        if (confirm(msg)==true){
+        return true;}else{return false;}
+        }
+
+        function p_mod() {
+        var msg="您真的确定要修改吗？";
+        if (confirm(msg)==true){
+        return true;}else{return false;}
+        }
+
+        {#function delcfm() {#}
+        {#        if (!confirm("确认要删除？")) {#}
+        {#            window.event.returnValue = false;#}
+        {#            return false;#}
+        {#        }#}
+        {#    }#}
+
+        function post(url, params) {
+            var temp = document.createElement("form"); //创建form表单
+            temp.action = url;
+            temp.method = "post";
+            temp.style.display = "none";//表单样式为隐藏
+            for (var item in params) {//初始化表单内部的控件
+               //根据实际情况创建不同的标签元素
+                var opt =document.createElement("input");  //添加input标签
+                opt.type="text";   //类型为text
+                opt.id = item;      //设置id属性
+                opt.name = item;    //设置name属性
+                opt.value = params[item];   //设置value属性
+                temp.appendChild(opt);
+            }
+
+            document.body.appendChild(temp);
+            temp.submit();
+            return temp;
+            }
+
+    </script>
+{% endblock %}
+
+
