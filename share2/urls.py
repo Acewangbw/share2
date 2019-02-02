@@ -25,15 +25,22 @@ from users.views.ForgetPwdView import ForgetPwdView
 from users.views.ResetView import ResetView
 from users.views.ModifyPwdView import ModifyPwdView
 
+from users.views.test import testview
 
-
+import xadmin
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    path('xadmin/', xadmin.site.urls),
+
     #主页
     re_path(r'^$', Index.as_view(), name="index"),
 
     path('index/', Index.as_view(), name="index"),
+    path('test/', testview.as_view(), name="test"),
+
+
+
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegisterView.as_view(), name="register"),

@@ -9,16 +9,12 @@ _date_ = '2019-01-29 14:24'
 from django.db import models
 
 
-class UserInfo(models.Model):
-    """
-    用户表
-    """
+class UserProfile(AbstractUser):
 
-    nid = models.BigAutoField(primary_key=True)
-    username = models.CharField(verbose_name='用户名', max_length=32, unique=True)
-    password = models.CharField(verbose_name='密码', max_length=64)
+    id = models.BigAutoField(primary_key=True)
+
     nick_name = models.CharField(max_length=50, verbose_name=u"昵称")
-    email = models.EmailField(verbose_name='邮箱', unique=True)
+
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 头像 默认使用default.png
     image = models.ImageField(
@@ -27,12 +23,13 @@ class UserInfo(models.Model):
         max_length=100,
         verbose_name=u"头像"
     )
-
-    # 是否有权限 0 没有 1 有
+    models_introdoction = models.TextField(max_length=128)
+    # 是否有权限 0 没有 1 有, 这里是设定用户是否有权限删除和下载。
     is_admin = models.BooleanField(null=False, default=False)
 
+    #这里是设定用户是否有审批权限。
+    is_approver = models.BooleanField(null=False, default=False)
 
-    is_active = models.BooleanField(null=False, default=False)
 
     # meta信息，即后台栏目名
     class Meta:
@@ -43,12 +40,10 @@ class UserInfo(models.Model):
     def __str__(self):
         return self.username
 
-    def set_password(self, pass_word):
-        pass
 
 
 # Way 3 logintest
-# class UserInfo(AbstractUser):
+# class UserProfile(AbstractUser):
 #     """
 #     用户表
 #     """
@@ -87,31 +82,50 @@ class UserInfo(models.Model):
 
 class Dep(models.Model):
     """
-    博客信息
+    部门信息
     """
     nid = models.BigAutoField(primary_key=True)
-    title = models.CharField(verbose_name='个人博客标题', max_length=64)
-    site = models.CharField(verbose_name='个人博客前缀', max_length=32, unique=True)
-    # theme = models.CharField(verbose_name='博客主题', max_length=32)
-    user = models.OneToOneField(to='UserInfo', to_field='nid',on_delete=models.CASCADE)
+    title = models.CharField(verbose_name='部门', max_length=64)
+    # site = models.CharField(verbose_name='前缀', max_length=32, unique=True)
+    # theme = models.CharField(verbose_name='主题', max_length=32)
+    # user = models.OneToOneField(to='UserProfile', to_field='nid',on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = u"部门"
+
+    def __str__(self):
+        """定义每个数据对象的显示信息"""
+        return self.title
+
 
 class U2D(models.Model):
-    user = models.ForeignKey(UserInfo, on_delete=models.CASCADE, null=True, verbose_name='用户所属部门')
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True, verbose_name='用户所属部门')
     dep = models.ForeignKey(Dep, on_delete=models.CASCADE, null=True)
+
+
 
     class Meta:
         verbose_name_plural = u"用户2部门"
 
+    # def __str__(self):
+    #     """定义每个数据对象的显示信息"""
+    #     return self.user
+
+
+
+class ProjectModel(models.Model):
+    nid = models.AutoField(primary_key=True)
+    # site = models.CharField(verbose_name='主页', max_length=32, unique=True)
+    Project_name = models.CharField(verbose_name='项目名称', max_length=32)
+    # dep = models.ForeignKey(verbose_name='所属部门', to='Dep', to_field='nid',on_delete=models.CASCADE)
+
+
+    class Meta:
+        verbose_name_plural = u"项目"
+
     def __str__(self):
         """定义每个数据对象的显示信息"""
-        return self.user
-
-
-
-class Project(models.Model):
-    nid = models.AutoField(primary_key=True)
-    Project_name = models.CharField(verbose_name='项目名称', max_length=32)
-    dep = models.ForeignKey(verbose_name='所属博客', to='Dep', to_field='nid',on_delete=models.CASCADE)
+        return self.Project_name
 
 
 class AddFileModel(models.Model):
@@ -135,26 +149,47 @@ class AddFileModel(models.Model):
         through_fields=('file', 'dep'),
     )
 
+    type_choices = [
+        (1, "公开"),
+        (2, "内部"),
+    ]
+    # 1,2, 这里用来在view层进行判断，如果是公开的，需要进入审批流程。也就是这个文件会在， 文件处理.html里面等待带有approver权限的用户进行审批。
+    models_Filetype_type_id = models.IntegerField(choices=type_choices, default=None,verbose_name="是否公开")
+
+
+    models_Fileproject = models.ForeignKey(ProjectModel,on_delete=models.CASCADE)
+
+    # upload_by = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+
+
 
     class Meta:
         verbose_name = u"上传文件"
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        """定义每个数据对象的显示信息"""
+        return self.models_Filename
+
+class FilePublic(models.Model):
+    file = models.ForeignKey(AddFileModel, on_delete=models.CASCADE, null=True, verbose_name='文章到部门')
+    #这里是通过最后审批后，改变这个值。
+    status = models.BooleanField(null=False, default=False,verbose_name="文件是否可以发布")
 
 
 #定义部门
 class File2DepModel(models.Model):
 
-    file = models.ForeignKey(AddFileModel,on_delete=models.CASCADE,null=True,verbose_name='文章到部门')
+    file = models.ForeignKey(AddFileModel,on_delete=models.CASCADE,null=True,verbose_name='文件到部门')
     dep = models.ForeignKey(Dep,on_delete=models.CASCADE,null=True,verbose_name='部门')
 
 
     class Meta:
         verbose_name_plural = u"文件2部门"
 
-    def __str__(self):
-        """定义每个数据对象的显示信息"""
-        return self.file
+    # def __str__(self):
+    #     """定义每个数据对象的显示信息"""
+    #     return self.file
 
 # 邮箱验证码model
 class EmailVerifyRecord(models.Model):
@@ -178,6 +213,19 @@ class EmailVerifyRecord(models.Model):
     def __str__(self):
         return '{0}({1})'.format(self.code, self.email)
 
+#这个是权限的流程的表。
+class Process(models.Model):
+
+    file = models.OneToOneField(to='AddFileModel', to_field='nid',on_delete=models.CASCADE)
+    approver = models.ForeignKey(UserProfile,related_name='p',null=True,blank=True,on_delete=models.CASCADE)
+    status_choices = (
+        (1,'未处理'),
+        (2,'处理中'),
+        (3,'已审批'),
+    )
+    status = models.IntegerField(choices=status_choices,default=1)
+    reject_reason = models.TextField(null=True)
+    process_time = models.DateTimeField(null=True)
 
 
 

@@ -3,7 +3,7 @@
 from django.shortcuts import render
 from users.forms.ActiveForm import ActiveForm
 from repository.models import EmailVerifyRecord
-from repository.models import UserInfo
+from repository.models import UserProfile
 import request
 
 
@@ -23,7 +23,7 @@ class ActiveUserView(View):
                 # 获取到对应的邮箱
                 email = record.email
                 # 查找到邮箱对应的user
-                user = UserInfo.objects.get(email=email)
+                user = UserProfile.objects.get(email=email)
                 user.is_active = True
                 user.save()
                 # 激活成功跳转到登录页面

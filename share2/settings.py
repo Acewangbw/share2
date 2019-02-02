@@ -27,21 +27,12 @@ SECRET_KEY = '$^%j@ic%*!zxbpop^2b*j05u#$z)__v8726175#h&gqnnf(r%o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 #
-# AUTHENTICATION_BACKENDS = (
-#     'users.views.CustomBackend',
-#
-# )
-# AUTHENTICATION_BACKENDS = (
-#     'django.contrib.auth.backends.ModelBackend',
-#     #'django.contrib.auth.backends.RemoteUserBackend',
-#     )
-
-#新增的
-
-
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend.CustomBackend',
+)
 
 # Application definition
 
@@ -57,11 +48,11 @@ INSTALLED_APPS = [
     'repository',
     'crispy_forms',
     'captcha',
+    'xadmin',
 ]
 
 # # 此处重载是为了使我们的UserProfile生效
-# AUTH_USER_MODEL = "users.UserInfo"
-#
+AUTH_USER_MODEL = "repository.UserProfile"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,12 +60,9 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',#新增的Jan-31
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
 
 
 ROOT_URLCONF = 'share2.urls'
@@ -112,6 +100,10 @@ DATABASES = {
         'USER':'root',
         'PASSWORD':'a.123456',
         'HOST':'127.0.0.1',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
 
@@ -133,7 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

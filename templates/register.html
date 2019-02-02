@@ -47,7 +47,7 @@
                         <h3 class="box-title m-b-20">Sign Up</h3>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input name="account" class="form-control" type="text" required="" placeholder="Name">
+                                <input name="username" class="form-control" type="text" required="" placeholder="Name" value="{% ifnotequal None register_form.username.value %}{{ register_form.username.value }}{% endifnotequal %}">
                             </div>
                         </div>
                         <div class="form-group ">
@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <div class="col-xs-12" {% if register_form.captcha.errors %} errorput{% endif %}>
     {#                                <input class="form-control Captcha" type="text" required="" placeholder="Captcha">#}
-                                {{ register_form.captcha }}
+                                <a>{{ register_form.captcha }}</a>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -104,7 +104,7 @@
     <script src="{% static 'node_modules/jquery/jquery-3.2.1.min.js' %}"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{% static 'node_modules/popper/popper.min.js' %}"></script>
-    <script src="../static/node_modules/bootstrap/../static/js/bootstrap.min.js"></script>
+{#    <script src="../static/node_modules/bootstrap/../static/js/bootstrap.min.js"></script>#}
     <script type="text/javascript">
         $(function() {
             $(".preloader").fadeOut();
@@ -120,6 +120,7 @@
             $("#recoverform").fadeIn();
         });
     </script>
+
 </body>
 
 </html>

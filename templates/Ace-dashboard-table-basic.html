@@ -1,5 +1,94 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+                <!-- column -->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">最新下载统计</h4>
+                            {#                                <h6 class="card-subtitle">Add<code>.table-bordered</code>for borders on all sides of the table and cells.</h6>#}
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>文件名称</th>
+                                        <th>下载数量</th>
+                                        <th>上传时间</th>
+                                        <th class="text-nowrap">描述</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for file in allfile %}
+                                        <tr>
+                                            <td>{{ file.models_Filename }}</td>
+                                            <td>
+                                                <div class="progress progress-xs margin-vertical-10 ">
+                                                    <div class="progress-bar bg-danger"
+                                                         style="width: 35%; height:6px;"></div>
+                                                </div>
+                                            </td>
+                                            <td>{{ file.models_Updated_date }}</td>
+                                            <td class="text-nowrap">
+                                                {{ file.models_Filedes }}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+                <!-- column -->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">最新上载统计</h4>
 
-123
-
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>文件名称</th>
+                                        <th>上传者</th>
+                                        <th>上传日期</th>
+                                        <th>用于</th>
+                                        <th>部门</th>
+                                        <th>描述</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for file in allfile %}
+                                        <tr>
+                                            <td>{{ file.models_Filename }}</td>
+                                            <td>Ace</td>
+                                            <td><span class="text-muted"><i
+                                                    class="fa fa-clock-o"></i>{{ file.models_Updated_date }}</span></td>
+                                            <td>{{ file.models_Fileusedfor }}</td>
+                                            <td>
+                                                <div class="label label-table label-success">{{ file.models_Filedepartment }}</div>
+                                            </td>
+                                            <td>{{ file.models_Filedes }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+            </div>
+{% endblock %}
+{% block project_list %}
+    {% for all_project in allproject %}
+<li><a href="#">{{ all_project.Project_name }}</a></li>
+    {% endfor %}
+{% endblock %}
+{% block bread %}
+<li class="breadcrumb-item active">Deshboard</li>
+{% endblock %}
 
 

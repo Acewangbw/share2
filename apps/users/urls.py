@@ -13,9 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.urls import path, include, re_path
-
+from django.urls import path
+from users.views.home import homeview
+from users.views.Addproject import Addproject
 
 
 app_name = 'users'
@@ -25,18 +25,6 @@ app_name = 'users'
 
 
 urlpatterns = [
-    # url(r'^login.html$', account.login),
-    # url(r'^xiaoyun.html$', account.xiaoyun),
-    # url(r'^shizhengwen.html$', account.shizhengwen),
-    # url(r'^cunzhang.html$', account.cunzhang),
-    # url(r'^laocunzhang.html$', account.laocunzhang),
-    # url(r'^logout.html$', account.logout),
-    # url(r'^register.html$', account.register),
-    # path('profile/', RegisterView.as_view, name='register'),
-    # url(r'^check_code.html$', account.check_code),
-    # url(r'^all/(?P<article_type_id>\d+).html$', home.index, name='index'),
-    # url(r'^(?P<site>\w+).html$', home.home),
-    # url(r'^(?P<site>\w+)/(?P<condition>((tag)|(date)|(category)))/(?P<val>\w+-*\w*).html$', home.filter),
-    # url(r'^(?P<site>\w+)/(?P<nid>\d+).html$', home.detail),
-    # url(r'^', home.index),
-]
+        path('home/', homeview.as_view(), name='home'),
+        path('addproject/', Addproject.as_view(), name='addproject'),
+        ]

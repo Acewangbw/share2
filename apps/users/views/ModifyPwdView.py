@@ -3,7 +3,7 @@ from django.contrib.auth.hashers import make_password
 from django.shortcuts import render
 
 from users.forms.ModifyPwdForm import ModifyPwdForm
-from repository.models import UserInfo
+from repository.models import UserProfile
 
 _author_ = 'Ace'
 _date_ = '2019-01-16 11:54'
@@ -26,7 +26,7 @@ class ModifyPwdView(View):
                     request, "reset_pwd.html", {
                         "email": email, "msg": "密码不一致"})
             # 如果密码一致
-            user = UserInfo.objects.get(email=email)
+            user = UserProfile.objects.get(email=email)
             # 加密成密文
             user.password = make_password(pwd2)
             # save保存到数据库

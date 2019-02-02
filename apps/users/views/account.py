@@ -41,7 +41,7 @@ def login(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            user_info = models.UserInfo.objects. \
+            user_info = models.UserProfile.objects. \
                 filter(username=username, password=password). \
                 values('nid', 'nickname',
                        'username', 'email',

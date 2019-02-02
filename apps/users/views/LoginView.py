@@ -1,10 +1,11 @@
 # _*_ coding: utf-8 _*_
-import json
 
-from django.contrib import auth
+
+
+
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.hashers import check_password
-from django.contrib.auth.models import AbstractUser
+from django.db.models import Q
+
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render,redirect
 
@@ -12,12 +13,15 @@ from django.shortcuts import render,redirect
 from django.urls import reverse
 from django.views.generic.base import View
 
+from repository.models import UserProfile
 from users.forms.LoginForm import LoginForm
 
-from repository.models import UserInfo
-from repository import models
-from django.contrib.auth.hashers import check_password
-from django.core import serializers
+
+
+#https://blog.csdn.net/zhangmengran/article/details/83547634
+'''
+尝试使用Absouble User试
+'''
 
 # Wa1 要匹配form
 class LoginView(View):
@@ -44,39 +48,32 @@ class LoginView(View):
             pass_word = request.POST.get("password", "")
             print("user_name", user_name, "pass_word", pass_word)
 
-
             # 成功返回user对象,失败返回null
-            user = authenticate(username=user_name, password=pass_word)
-            # print("user: ", user.is_active)
-            print("user:", user)
-            print(UserInfo.objects.filter(username=user_name))
-            print("*" * 20)
-            # 如果不是null说明验证成功
+            user = authenticate(username=user_name,password=pass_word)
+
             if user is not None:
                 # 只有当用户激活时才给登录
-                # if user.is_active:
-                if True:
+                if user.is_active:
                     # login_in 两参数：request, user
                     # 实际是对request写了一部分东西进去，然后在render的时候：
                     # request是要render回去的。这些信息也就随着返回浏览器。完成登录
                     login(request, user)
                     # 跳转到首页 user request会被带回到首页
+                    # 增加重定向回原网页。
+
+
                     # 存入session 序列化用户对象
                     user_dict = {}
-                    user_ser = UserInfo.objects.filter(username=user_name)[0]
-                    # user_dict['user_dep'] = user_ser.dep
+                    user_ser = UserProfile.objects.filter(username=user_name)[0]
                     user_dict["is_admin"] = user_ser.is_admin
                     user_dict["user_name"] = user_ser.username
 
                     request.session["user"] = user_dict
                     request.session["is_login"] = True
                     # 增加重定向回原网页。
+
+
                     redirect_url = request.POST.get('next', '')
-
-                    #设定自带保存登陆。
-                    if login_form.cleaned_data.get('rmb'):
-                        request.session.set_expiry(60 * 60 * 24 * 30)
-
                     if redirect_url:
                         return HttpResponseRedirect(redirect_url)
                     # 跳转到首页 user request会被带回到首页
