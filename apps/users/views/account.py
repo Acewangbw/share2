@@ -11,7 +11,10 @@ from utils.check_code import create_validate_code
 from repository import models
 from ..forms.account import LoginForm
 
+'''
+这里是复杂别人博客项目的，我做参考使用的。
 
+'''
 
 
 def check_code(request):

@@ -8,7 +8,10 @@ from django.forms import widgets as django_widgets
 
 from repository import models
 
+'''
+这里是复杂别人博客项目的，我做参考使用的。
 
+'''
 class ArticleForm(django_forms.Form):
     title = django_fields.CharField(
         widget=django_widgets.TextInput(attrs={'class': 'form-control', 'placeholder': '文章标题'})

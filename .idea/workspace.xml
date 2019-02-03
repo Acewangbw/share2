@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64f014ae-e219-46d1-9093-37582b75d3d2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/share2.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/repository/adminx.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/repository/migrations/0004_projectmodel_site.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/repository/migrations/0005_auto_20190202_2025.py" />
+    <list default="true" id="64f014ae-e219-46d1-9093-37582b75d3d2" name="Default" comment="Feb2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/apps/sharefile/forms/article.py" afterPath="$PROJECT_DIR$/apps/sharefile/forms/article.py" />
       <change beforePath="$PROJECT_DIR$/apps/sharefile/urls.py" afterPath="$PROJECT_DIR$/apps/sharefile/urls.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/forms/RegisterForm.py" afterPath="$PROJECT_DIR$/apps/users/forms/RegisterForm.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" afterPath="$PROJECT_DIR$/apps/users/urls.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/ActiveUserView.py" afterPath="$PROJECT_DIR$/apps/users/views/ActiveUserView.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/CustomBackend.py" afterPath="$PROJECT_DIR$/apps/users/views/CustomBackend.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/Index.py" afterPath="$PROJECT_DIR$/apps/users/views/Index.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/LoginView.py" afterPath="$PROJECT_DIR$/apps/users/views/LoginView.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/ModifyPwdView.py" afterPath="$PROJECT_DIR$/apps/users/views/ModifyPwdView.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/RegisterView.py" afterPath="$PROJECT_DIR$/apps/users/views/RegisterView.py" />
+      <change beforePath="$PROJECT_DIR$/apps/sharefile/views/user.py" afterPath="$PROJECT_DIR$/apps/sharefile/views/user.py" />
+      <change beforePath="$PROJECT_DIR$/apps/users/forms/base.py" afterPath="$PROJECT_DIR$/apps/users/forms/base.py" />
       <change beforePath="$PROJECT_DIR$/apps/users/views/account.py" afterPath="$PROJECT_DIR$/apps/users/views/account.py" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views/home.py" afterPath="$PROJECT_DIR$/apps/users/views/home.py" />
-      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0001_initial.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/repository/models.py" afterPath="$PROJECT_DIR$/repository/models.py" />
-      <change beforePath="$PROJECT_DIR$/share2/settings.py" afterPath="$PROJECT_DIR$/share2/settings.py" />
-      <change beforePath="$PROJECT_DIR$/share2/urls.py" afterPath="$PROJECT_DIR$/share2/urls.py" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.min.css" afterPath="$PROJECT_DIR$/static/css/style.min.css" />
-      <change beforePath="$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html" afterPath="$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Ace-file-add-realestate-add-property.html" afterPath="$PROJECT_DIR$/templates/Ace-file-add-realestate-add-property.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Ace-filedetail-music-album-detail.html" afterPath="$PROJECT_DIR$/templates/Not-Ace-filedetail-music-album-detail.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Ace-pages-profile.html" afterPath="$PROJECT_DIR$/templates/Ace-pages-profile.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Not in use index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/Not-Ace-filedetail-music-album-detail.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
+      <change beforePath="$PROJECT_DIR$/templates/pages-login-2.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,43 +28,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Addproject.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/users/views/Addproject.py">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/forms/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="198">
+              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/views/account.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/views/home.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/views/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ace-dashboard-table-basic.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ace-add-project.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Ace-add-project.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding>
-                <element signature="e#24#69#0" expanded="true" />
+                <element signature="e#50#1531#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddfileView.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/sharefile/views/AddfileView.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/sharefile/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddfileForms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/sharefile/forms/AddfileForms.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/share2/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="1056">
+              <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectForm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/forms/ProjectForm.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="572">
+              <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/users/views/Index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -105,16 +143,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>博客</find>
-      <find>Time</find>
-      <find>tab</find>
-      <find>Full Name</find>
       <find>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nu</find>
       <find>Address</find>
       <find>Select Country</find>
       <find>254</find>
       <find>brea</find>
-      <find>文件</find>
       <find>addModal</find>
       <find>Card</find>
       <find>has-arrow waves-effect waves-dark</find>
@@ -135,6 +168,11 @@
       <find>name</find>
       <find>ass</find>
       <find>项目</find>
+      <find>Contexual Classes</find>
+      <find>文件</find>
+      <find>文件名称</find>
+      <find>Shenzhen Technology University</find>
+      <find>University</find>
     </findStrings>
     <replaceStrings>
       <replace>UserInfo</replace>
@@ -149,11 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/web/forms/RegisterForm.py" />
-        <option value="$PROJECT_DIR$/repository/models/UserInfoModel.py" />
-        <option value="$PROJECT_DIR$/repository/models/__init__.py" />
-        <option value="$PROJECT_DIR$/repository/models/Models.py" />
-        <option value="$PROJECT_DIR$/apps/utils/email_send.py" />
         <option value="$PROJECT_DIR$/apps/users/views/index.py" />
         <option value="$PROJECT_DIR$/apps/users/views/ForgetPwdView.py" />
         <option value="$PROJECT_DIR$/apps/users/views/ResetView.py" />
@@ -163,7 +196,6 @@
         <option value="$PROJECT_DIR$/static/css/style.min.css" />
         <option value="$PROJECT_DIR$/apps/users/views/ActiveUserView.py" />
         <option value="$PROJECT_DIR$/apps/users/views/CustomBackend.py" />
-        <option value="$PROJECT_DIR$/apps/users/views/account.py" />
         <option value="$PROJECT_DIR$/apps/users/views/ModifyPwdView.py" />
         <option value="$PROJECT_DIR$/apps/users/views/RegisterView.py" />
         <option value="$PROJECT_DIR$/apps/users/forms/RegisterForm.py" />
@@ -181,13 +213,11 @@
         <option value="$PROJECT_DIR$/apps/users/views/home.py" />
         <option value="$PROJECT_DIR$/templates/Ace-pages-profile.html" />
         <option value="$PROJECT_DIR$/apps/sharefile/views/FileListView.py" />
-        <option value="$PROJECT_DIR$/apps/sharefile/urls.py" />
         <option value="$PROJECT_DIR$/templates/Ace-filedetail-music-album-detail.html" />
         <option value="$PROJECT_DIR$/templates/Ace-filddetail.html" />
         <option value="$PROJECT_DIR$/templates/Ace-filedetail.html" />
         <option value="$PROJECT_DIR$/apps/sharefile/forms/ProcessMaker.py" />
         <option value="$PROJECT_DIR$/apps/sharefile/views/FileDetailView.py" />
-        <option value="$PROJECT_DIR$/templates/Ace-filedetail-realestate-add-property.html" />
         <option value="$PROJECT_DIR$/apps/users/views/addproject.py" />
         <option value="$PROJECT_DIR$/apps/users/urls.py" />
         <option value="$PROJECT_DIR$/apps/users/forms/DepForm.py" />
@@ -195,11 +225,19 @@
         <option value="$PROJECT_DIR$/repository/adminx.py" />
         <option value="$PROJECT_DIR$/apps/users/views/Index.py" />
         <option value="$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/Ace-add-dept.html" />
         <option value="$PROJECT_DIR$/templates/Ace-add-project.html" />
         <option value="$PROJECT_DIR$/apps/users/forms/ProjectForm.py" />
         <option value="$PROJECT_DIR$/apps/users/views/Addproject.py" />
+        <option value="$PROJECT_DIR$/apps/sharefile/views/ProccessView.py" />
+        <option value="$PROJECT_DIR$/apps/sharefile/urls.py" />
+        <option value="$PROJECT_DIR$/templates/Ace-processlist-table-basic.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/Ace-filedetail-realestate-add-property.html" />
+        <option value="$PROJECT_DIR$/apps/sharefile/forms/article.py" />
+        <option value="$PROJECT_DIR$/apps/sharefile/views/user.py" />
+        <option value="$PROJECT_DIR$/apps/users/forms/base.py" />
+        <option value="$PROJECT_DIR$/apps/users/views/account.py" />
       </list>
     </option>
   </component>
@@ -260,6 +298,13 @@
               <item name="share2" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="sharefile" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="share2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="share2" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="sharefile" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -290,6 +335,11 @@
             <path>
               <item name="share2" type="b2602c69:ProjectViewProjectNode" />
               <item name="share2" type="462c0819:PsiDirectoryNode" />
+              <item name="share2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="share2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="share2" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -303,21 +353,21 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bidding/bidding" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python\Webproject\share2\share2\repository" />
+      <recent name="C:\Python\Webproject\share2\share2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Python\Webproject\share2\share2\templates" />
       <recent name="C:\Python\Webproject\share2\share2\static" />
       <recent name="C:\Python\Webproject\share2\share2\apps\sharefile" />
       <recent name="C:\Python\Webproject\share2\share2\apps\sharefile\views" />
       <recent name="C:\Python\Webproject\share2\share2\static\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Python\Webproject\share2\share2\repository" />
-      <recent name="C:\Python\Webproject\share2\share2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -406,22 +456,30 @@
       <option name="project" value="LOCAL" />
       <updated>1548901713620</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feb2">
+      <created>1549118780758</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549118780758</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25323975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53913045" sideWeight="0.50431967" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38356164" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66625154" sideWeight="0.49568033" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25323975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66625154" sideWeight="0.49568033" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4732254" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -431,7 +489,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@share2" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5118306" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@share" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49688667" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -446,7 +503,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jan-31" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jan-31" />
+    <MESSAGE value="Feb2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feb2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -482,66 +540,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/repository/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views/account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-944">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views/ResetView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/horizontal-base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../env/Lib/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="287" column="6" lean-forward="false" selection-start-line="287" selection-start-column="6" selection-end-line="287" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -549,6 +552,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -563,6 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -570,6 +575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,13 +597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/share2/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -605,6 +605,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -612,6 +613,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -619,27 +621,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1307">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sharefile/views/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1320">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Ace-filelist-transaction-listing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -647,6 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -664,26 +647,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sharefile/views/FileListView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="42" />
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Ace-processlist-table-basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Not-Ace-filedetail-music-album-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -698,6 +666,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -705,6 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-55">
           <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,24 +692,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sharefile/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="73" lean-forward="true" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/views/ActiveUserView.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Ace-filedetail-realestate-add-property.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2792">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -747,6 +704,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -754,13 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="40" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding>
+            <marker date="1549028937536" expanded="true" signature="2191:2260" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -768,34 +722,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views/Index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="133" column="144" lean-forward="false" selection-start-line="133" selection-start-column="144" selection-end-line="133" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Ace-add-project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="10" column="99" lean-forward="true" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+          <folding>
+            <element signature="e#1074#1091#0" expanded="false" />
+            <element signature="e#3557#4755#0" expanded="false" />
+            <element signature="e#4793#4997#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,13 +734,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,18 +757,206 @@
     <entry file="file://$PROJECT_DIR$/apps/users/forms/ProjectForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/views/Addproject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="231">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
-            <element signature="e#24#69#0" expanded="true" />
+            <element signature="e#24#69#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Ace-filelist-transaction-listing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Back-tablelist Ace-processlist-table-basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sharefile/views/FileListView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#24#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Ace-processlist-table-basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="207" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="207" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sharefile/views/ProccessView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+          <folding>
+            <element signature="e#24#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="143" column="113" lean-forward="false" selection-start-line="143" selection-start-column="113" selection-end-line="143" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Ace-filedetail-realestate-add-property.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3696">
+          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <folding>
+            <element signature="e#5545#5568#0#HTML" expanded="false" />
+            <element signature="e#6359#6377#0#HTML" expanded="false" />
+            <element signature="e#8303#8326#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sharefile/forms/article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#343#1626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sharefile/views/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/forms/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views/Index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Ace-dashboard-table-basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Ace-add-project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding>
+            <element signature="e#50#1531#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/share2/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sharefile/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

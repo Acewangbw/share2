@@ -8,6 +8,8 @@ _date_ = '2019-01-30 15:57'
 from sharefile.views.AddfileView import AddfileView
 from sharefile.views.FileListView import FileListView
 
+from sharefile.views.ProccessView import ProcessView
+
 from django.urls import path, include, re_path
 # from . import views
 
@@ -19,6 +21,8 @@ urlpatterns = [
         path('addfile/', AddfileView.as_view(), name='addfile'),
         path('filelist/', FileListView.as_view(), name='filelist'),
         path('filedetail/', FileDetailView.as_view(), name='filedetail'),
+        path('process/', ProcessView.as_view(), name='process'),
+
         # re_path('filelist/(?P<pk>\d+)/',FileListView.as_view(), name='filelist'),
         # re_path('filedownload/(?P<product_id>\d+)/', CountDownloadView.as_view, name='countdownload'),
         # path('buttons/', ButtonsView.as_view(), name='buttons'),

@@ -15,6 +15,10 @@ from repository import models
 from utils.pagination import Pagination
 from utils.xss import XSSFilter
 
+'''
+这里是复杂别人博客项目的，我做参考使用的。
+
+'''
 
 @check_login
 def index(request):
