@@ -143,11 +143,14 @@ class AddFileModel(models.Model):
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
 
-    department = models.ManyToManyField(
-        to="Dep",
-        through="File2DepModel",
-        through_fields=('file', 'dep'),
-    )
+    # department = models.ManyToManyField(
+    #     to="Dep",
+    #     through="File2DepModel",
+    #     through_fields=('file', 'dep'),
+    # )
+
+    department = models.ManyToManyField(Dep,through='File2DepModel',through_fields=('file','dep'))
+    # department = models.ForeignKey(Dep,on_delete=models.CASCADE)
 
     type_choices = [
         (1, "公开"),
