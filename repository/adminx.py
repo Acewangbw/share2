@@ -31,11 +31,11 @@ xadmin.site.register(views.CommAdminView, GlobalSettings)
 
 class DepAdmin(object):
     # 配置后台我们需要显示的列
-    list_display = ['nid', 'title', 'site']
+    list_display = ['nid', 'title']
     # 配置搜索字段,不做时间搜索
-    search_fields = ['nid', 'title', 'site']
+    search_fields = ['nid', 'title']
     # 配置筛选字段
-    list_filter = ['nid', 'title', 'site']
+    list_filter = ['nid', 'title']
 xadmin.site.register(Dep, DepAdmin)
 
 

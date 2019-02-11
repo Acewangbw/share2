@@ -66,12 +66,15 @@ class LoginView(View):
                     user_dict = {}
                     user_ser = UserProfile.objects.filter(username=user_name)[0]
                     user_dict["is_admin"] = user_ser.is_admin
+                    # user_dict["is_admin"] = user_ser.is_admin
+                    # user_dict["is_approver"] = user_ser.is_approver
+                    user_dict["is_approver"] = user_ser.is_approver
                     user_dict["user_name"] = user_ser.username
-
+                    user_dict['user_id'] = user_ser.id
                     request.session["user"] = user_dict
                     request.session["is_login"] = True
+                    print("登录-----", user_dict)
                     # 增加重定向回原网页。
-
 
                     redirect_url = request.POST.get('next', '')
                     if redirect_url:

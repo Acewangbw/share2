@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.urls import path
+
+from users.views.UpdatePwdView import UpdatePwdView
+# from users.views.UploadImageView import UploadImageView
 from users.views.home import homeview
 from users.views.Addproject import Addproject
+from users import views
+from users.views.UploadImageView import Upload_image
 
 
 app_name = 'users'
@@ -27,4 +32,7 @@ app_name = 'users'
 urlpatterns = [
         path('home/', homeview.as_view(), name='home'),
         path('addproject/', Addproject.as_view(), name='addproject'),
+        path('imageupload/', views.UploadImageView.Upload_image ),# 用户头像上传
+        # 用户个人中心修改密码
+        path('update/pwd/', UpdatePwdView.as_view(), name="update_pwd"),
         ]

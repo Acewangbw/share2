@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="form-group ">
-                            <div class="col-xs-12" {% if register_form.password.errors %} errorput{% endif %}>
+                            <div class="col-xs-12 {% if register_form.password.errors %} errorput{% endif %}" >
                                 <input name="password" class="form-control" type="password" required="" value="{% ifnotequal None register_form.password.value %}{{ register_form.password.value }}{% endifnotequal %}" placeholder="Password">
                             </div>
                         </div>
@@ -112,9 +112,9 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
-        // ============================================================== 
-        // Login and Recover Password 
-        // ============================================================== 
+        // ==============================================================
+        // Login and Recover Password
+        // ==============================================================
         $('#to-recover').on("click", function() {
             $("#loginform").slideUp();
             $("#recoverform").fadeIn();

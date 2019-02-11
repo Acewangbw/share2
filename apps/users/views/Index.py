@@ -18,15 +18,16 @@ class Index(View):
     def get(self,request):
 
         try:
-            # 从session获取用户信息
+            # 从session获取用户信息, 如果不存在会报空指针异常，代表用户未登录
             user = request.session.get("user")
             user_name = user.get("user_name")
-        except:
+
+        except Exception as e:
+            print("----访问主页异常----", e)
             #这里要进行判断
             # file = FilePublic.objects.filter(status=1)
-
             #这里之后要删掉的。
-            allfile = AddFileModel.objects.filter(models_Filetype_type_id=1)
+            allfile = AddFileModel.objects.filter(Q(models_Filetype_type_id=1) & Q(status=1))
 
             allproject = ProjectModel.objects.all()
             print(allproject)

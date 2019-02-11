@@ -143,11 +143,9 @@ class AddFileModel(models.Model):
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
 
-    department = models.ManyToManyField(
-        to="Dep",
-        through="File2DepModel",
-        through_fields=('file', 'dep'),
-    )
+    department = models.ForeignKey(Dep,on_delete=models.CASCADE, null=True)
+
+    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True)
 
     type_choices = [
         (1, "公开"),
@@ -155,10 +153,11 @@ class AddFileModel(models.Model):
     ]
     # 1,2, 这里用来在view层进行判断，如果是公开的，需要进入审批流程。也就是这个文件会在， 文件处理.html里面等待带有approver权限的用户进行审批。
     models_Filetype_type_id = models.IntegerField(choices=type_choices, default=None,verbose_name="是否公开")
+    # 是否通过审核 1 通过，0未审核 ， 2未通过
+    status = models.CharField(default=0, verbose_name="文件是否可以发布", max_length=1)
+    models_Fileproject = models.ForeignKey(ProjectModel,on_delete=models.CASCADE,null=True,blank=True)
 
-
-    models_Fileproject = models.ForeignKey(ProjectModel,on_delete=models.CASCADE)
-
+    reason = models.CharField(default="无", max_length=100, verbose_name="审核理由")
     # upload_by = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
 
 
@@ -191,6 +190,7 @@ class File2DepModel(models.Model):
     #     """定义每个数据对象的显示信息"""
     #     return self.file
 
+
 # 邮箱验证码model
 class EmailVerifyRecord(models.Model):
     SEND_CHOICES = (
@@ -212,6 +212,8 @@ class EmailVerifyRecord(models.Model):
     # 重载str方法使后台不再直接显示object
     def __str__(self):
         return '{0}({1})'.format(self.code, self.email)
+
+
 
 #这个是权限的流程的表。
 class Process(models.Model):
