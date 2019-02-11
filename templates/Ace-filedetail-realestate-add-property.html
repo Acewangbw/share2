@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block bread %}文件列表{% endblock %}
+{% block content %}
+  <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form name="{{ file.nid }}" id="form_data" class="pro-add-form" method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="plocation">文件名称</label>
+                                        <p>{{ file.models_Filename }}</p>
+{#                                        <input name="filename" type="text" class="form-control" id="plocation" placeholder="文件名称"> </div>#}
+                                    <div class="form-group">
+                                        <label for="pdesc">文件描述</label>
+                                        <p>{{ file.models_Filedes }}</p>
+{#                                        <textarea name="filedes" class="form-control" rows="5" id="pdesc" placeholder="文件描述"></textarea>#}
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">文件用于</label>
+                                        <p>{{ file.models_Fileproject }}</p>
+{#                                            <select name="fileproject" class="form-control custom-select" id="city">#}
+{#                                                {% for usefilefor in usedfor  %}#}
+{#                                                <option>{{ usefilefor.Usedfor }}</option>#}
+{#                                                {% endfor %}#}
+{#                                            </select>#}
+                                    </div>
+                                    <div class="form-group">
+                                        <h4 class="card-title">上传的文件</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>文件名称</th>
+                                                        <th>文件类型</th>
+                                                        <th>上传日期</th>
+                                                        <th class="text-nowrap">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>文件1模拟</td>
+                                                        <td>
+                                                            文件类型Word
+                                                        </td>
+                                                        <td>Feb 11, 2019</td>
+                                                        <td class="text-nowrap">
+                                                            <a href="javascript:void(0)" >下载</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 审批-->
+                                    <li class="box-label"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="btn btn-info text-white">审批</a></li>
+                                    <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">请确认审批</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body" id="Addmodel">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">理由</label>
+                                                                <div class="col-md-12">
+                                                                    <input name="keyword" type="text" class="form-control"
+                                                                           placeholder="">
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+                                                        <div class="modal-footer">
+                                                                <span id="errorMsg" style="color: #fff559;"></span>
+                                                                <button type="submit" class="btn btn-info waves-effect" data-dismiss="modal"
+                                                                        id="btnSave" name="agree" target="summbit"> 同意
+                                                                </button>
+                                                                <button type="submit" class="btn btn-default waves-effect" data-dismiss="modal">取消
+                                                                </button>
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+
+                                    <li style="color: red"  class="box-label"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModalD" class="btn btn-info text-white">拒绝</a></li>
+                                    <div id="myModalD" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">请给出拒绝理由</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body" id="Addmodel">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">理由</label>
+                                                                <div class="col-md-12">
+                                                                    <input name="keyword" type="text" class="form-control"
+                                                                           placeholder="">
+                                                                </div>
+                                                            </div>
+{##}
+                                                        </form>
+                                                         <div class="modal-footer">
+                                                                 <span id="errorMsg" style="color: #fff559;"></span>
+
+                                                                <button type="submit" class="btn btn-info waves-effect"
+                                                                        data-dismiss="modal"
+                                                                         id="btnSave" name="refuse" target="summbit">提交
+                                                                </button>
+
+                                                                <button type="submit"
+                                                                        class="btn btn-default waves-effect"
+                                                                        data-dismiss="modal">取消
+                                                                </button>
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+
+
+
+
+
+{#                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">添加文件</button>#}
+{#                                    <button type="submit" class="btn btn-dark waves-effect waves-light">取消</button>#}
+                                {% csrf_token %}
+                                    </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+  </div>
+
+{% endblock %}
+
+{% block custom_js %}
+{{ block.super }}
+    <script src="{% static 'myjs/process.js' %}"></script>
+{% endblock %}

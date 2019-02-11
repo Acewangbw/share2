@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">DEPARTMENT DETAILS</h5>
+                                <form class="form-material m-t-40" action="{% url 'users:addproject' %}" method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-md-12" for="example-text">Name</span>
+                                            </label>
+                                            <div class="col-md-12">
+                                                <input type="text" id="example-text" name="project" class="form-control" placeholder="enter name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
+                                    <button type="submit" class="btn btn-dark waves-effect waves-light">Cancel</button>
+                                {% csrf_token %}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

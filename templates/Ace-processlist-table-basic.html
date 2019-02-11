@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">审批管理</h4>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>文件名称</th>
+                                            <th>上传人</th>
+                                            <th>审批状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for file in allfile %}
+                                        <tr class="table-active">
+                                            <td scope="row">{{ forloop.counter }}</td>
+                                            <td>{{ file.models_Filename }}</td>
+                                            <td>{{ file.user_id }}</td>
+                                            <td>
+                                            <a href="/sharefile/filedetail?id={{ file.nid }}">
+                                                {% if file.status == "0" %}
+                                                    未审核
+                                                {% elif file.status == "2" %}
+                                                    未通过
+                                                {% endif %}
+                                            </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}
