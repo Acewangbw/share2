@@ -29,6 +29,12 @@ from users.views.test import testview
 
 import xadmin
 
+# 用于设定图片URL地址
+from django.views.static import serve
+#配件添加图片URL时用到的
+from .settings import MEDIA_ROOT
+
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
@@ -63,5 +69,6 @@ urlpatterns = [
     path("sharefile/", include('sharefile.urls', namespace='sharefile')),
     # users的URL
     path("users/", include('users.urls', namespace='users')),
-
+    # 处理图片显示的url,使用Django自带serve,传入参数告诉它去哪个路径找，我们有配置好的路径MEDIAROOT， 其中document_root是一个固定写法。
+    re_path('media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 ]

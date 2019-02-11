@@ -75,16 +75,18 @@ xadmin.site.register(File2DepModel, File2DepModelAdmin)
 
 class AddFileModelAdmin(object):
     # 配置后台我们需要显示的列
-    list_display = ['nid', 'models_Filename','models_Filedes',
-                    'read_count','models_Fileupload',
-                    'create_time','department','models_Filetype_type_id','models_Fileproject']
+    list_display = ['nid','models_Filename','models_Filedes',
+                    'department','models_Fileupload',
+                    'create_time','read_count',
+                    'models_Filetype_type_id',
+                    'models_Fileproject']
     # 配置搜索字段,不做时间搜索
-    search_fields = ['nid', 'models_Filename','models_Filedes',
-                    'read_count','models_Fileupload',
-                    'create_time','department','models_Filetype_type_id','models_Fileproject']
+    search_fields = ['nid','models_Filename','models_Filedes',
+                    'department','models_Fileupload',
+                    'create_time','read_count','models_Filetype_type_id','models_Fileproject']
     # 配置筛选字段
-    list_filter = ['nid', 'models_Filename','models_Filedes',
-                    'read_count','models_Fileupload',
-                    'create_time','department','models_Filetype_type_id','models_Fileproject']
+    list_filter = ['nid','models_Filename','models_Filedes',
+                    'department','models_Fileupload',
+                    'create_time','read_count','models_Filetype_type_id','models_Fileproject']
 
 xadmin.site.register(AddFileModel, AddFileModelAdmin)
