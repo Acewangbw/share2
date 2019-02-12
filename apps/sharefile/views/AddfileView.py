@@ -4,7 +4,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 
 from sharefile.forms import AddfileForms
-from repository.models import AddFileModel, U2D, UserProfile
+from repository.models import AddFileModel, U2D, UserProfile, File2DepModel
 from repository.models import ProjectModel
 from repository.models import Dep
 from utils.mixin_utils import LoginRequiredMixin
@@ -70,8 +70,6 @@ class AddfileView(LoginRequiredMixin,View):
         print("*"*20)
         print(request.POST)
         addfile_from = request.POST
-        file_profile = AddFileModel()
-
         if addfile_from :
             # 文件名
             filename = addfile_from.get("filename")
@@ -82,14 +80,14 @@ class AddfileView(LoginRequiredMixin,View):
             # 项目
             fileproject = addfile_from.get('fileproject')
             # 部门
-            dep  = addfile_from.get("dep")
+            deps = addfile_from.getlist("dep")
+            print("选择的部门", deps)
 
-            dep_obj = Dep.objects.filter(title=dep)
-            if dep_obj:
-                dep_obj = dep_obj[0]
-            else:
-                dep_obj = None
-
+            dep_obj_list = []
+            for dep in deps:
+                print(Dep.objects.filter(title=dep))
+                dep_obj_list.append(Dep.objects.filter(title=dep)[0])
+            print("部门对象列表: ", dep_obj_list)
             if 'fileupload' in list(request.FILES.keys()):
                 fileupload = request.FILES['fileupload']
             else:
@@ -103,21 +101,27 @@ class AddfileView(LoginRequiredMixin,View):
                 filetype_id = 2
 
             # 查询对应的项目
-            project = ProjectModel.objects.filter(Project_name=fileproject) #Modifify1
+            project = ProjectModel.objects.filter(Project_name=fileproject)
             print("project: ", project)
             print(project[0].nid)
-
+            file_profile = AddFileModel()
             file_profile.models_Filename = filename
             file_profile.models_Filedes = filedes
             file_profile.models_Filetype_type_id = filetype_id
-            file_profile.models_Fileproject = project[0]  #Modifify1
-            # file_profile.models_Fileproject = fileproject  #Modifify2
+            file_profile.models_Fileproject = project[0]
             file_profile.models_Fileupload = fileupload
             file_profile.models_Updated_date = datetime.now()
             file_profile.user_id = user_obj
-            file_profile.department = dep_obj
             # 保存
             file_profile.save()
+
+            # 多部门添加
+            for dep_obj in dep_obj_list:
+
+                file_dep = File2DepModel()
+                file_dep.dep = dep_obj
+                file_dep.file = file_profile
+                file_dep.save()
 
             return redirect('/sharefile/filelist/')
 

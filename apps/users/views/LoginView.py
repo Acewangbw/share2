@@ -71,6 +71,7 @@ class LoginView(View):
                     user_dict["is_approver"] = user_ser.is_approver
                     user_dict["user_name"] = user_ser.username
                     user_dict['user_id'] = user_ser.id
+                    
                     request.session["user"] = user_dict
                     request.session["is_login"] = True
                     print("登录-----", user_dict)

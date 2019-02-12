@@ -31,7 +31,7 @@
                                         <label for="pname">使用部门</label>
 {#                                        <h5 class="m-t-20">Multiple select boxes</h5>#}
                                         <select name="dep" class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                            <optgroup label="请选择部门">
+                                            <optgroup label="请选择部门" name="deps">
                                                 {% for user_dept in dept %}
                                                 <option value="{{ user_dept.title }}">{{ user_dept.title }}</option>
                                                 {% endfor %}

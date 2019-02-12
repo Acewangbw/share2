@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <div class="blocks-table txn-table" >
+                            <div class="blocks-table txn-table"  >
                                 <table class="table table-padded m-b-0">
                                     <thead>
                                         <tr class="header">
@@ -73,11 +73,12 @@
                                     </thead>
                                     <tbody>
                                     {% for file in allfile %}
-                                        <tr id={{ file.id }}>
+
+                                        <tr nid={{ file.file.nid }}>
                                             <td>
                                                 <div class="d-flex no-block">
                                                     <div class="text-ellipsis">
-                                                        <a onclick="countclick()" href="{{ MEDIA_URL }}{{ file.models_Fileupload }}" download="">{{ file.models_Filename }}</a>
+                                                        <a onclick="countclick()" href="{{ MEDIA_URL }}{{ file.file.models_Fileupload }}" download="">{{ file.file.models_Filename }}</a>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex no-block">
@@ -91,20 +92,55 @@
                                                 <div id="dowanload_count" class="text-success"></div>
                                             </td>
                                             <td class="hidden-xs">
-                                                <div>{{ file.user_id }}</div>
+                                                <div>{{ file.file.user_id }}</div>
                                             </td>
                                             <td valign="middle">
                                                 <div class="reward text-ellipsis">
-                                                    {{ file.models_Fileproject }}
+                                                    {{ file.file.models_Fileproject }}
                                                 </div>
                                             </td>
                                             <td>
         {#TODO                                                            判断用户是否登录#}
-                                                {% if request.session.user.user_name == file.user_id.username %}
+                                                {% if request.session.user.user_name == file.file.user_id.username %}
 {#                                                        先保留后续调试用#}
 {#                                                    <span>{{ request.session.user.user_name }}-----{{ file.user_id }}</span>#}
-                                                    {% if request.session.user.is_admin == 0 %}
-                                                    <a href="javascript:post('/sharefile/filelist/',{op:'del',file_id:'{{file.id}}'})" onclick="return p_del()">删除</a>
+                                                    {% if request.session.user.is_admin == 1 %}
+                                                        <li class="box-label"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModaldell" class="btn btn-info text-white del-row">删除</a></li>
+                                                        <div id="myModaldell" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel">确认要删除吗</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                    </div>
+                                                                    <div class="modal-body" id="Addmodel">
+{#                                                                        <form class="form-horizontal">#}
+{#                                                                            <div class="form-group">#}
+{#                                                                                <label class="col-md-12">理由</label>#}
+{#                                                                                <div class="col-md-12">#}
+{#                                                                                    <input name="keyword" type="text" class="form-control"#}
+{#                                                                                           placeholder="">#}
+{#                                                                                </div>#}
+{#                                                                            </div>#}
+{#                                                                        </form>#}
+                                                                        <div><input style="display: none;" type="text" id="delNid" /></div>
+                                                                        <div class="modal-footer">
+                                                                                <span id="errorMsg" style="color: #fff559;"></span>
+                                                                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal"
+                                                                                        id="delConfirm" name="agree" target="summbit"> 确认
+                                                                                </button>
+                                                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消
+                                                                                </button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+{#                                                         <a href="javascript:post('/sharefile/filelist/',{op:'del',file_id:'{{ file.nid }}'})" onclick="return p_del()">删除</a>#}
+{#                                                        <a href="javascript:post('/sharefile/filelist/',{op:'del',file_id:'{{file.id}}'})" onclick="return p_del()">删除</a>#}
                                                     {% endif %}
                                                 {% endif %}
                                             </td>
@@ -131,56 +167,59 @@
 {% endblock %}
 {% block custom_js %}
 {{ block.super }}
-
-    <script type="text/javascript">
-            var i=0;
-            function countclick()
-            {
-               i++;
-               document.getElementById("dowanload_count").innerHTML=i+"";
-            }
-     </script>
-    <script type="text/javascript">
-            {#<script language="javascript">#}
-
-        function p_del() {
-        var msg="您真的确定要删除吗？";
-        if (confirm(msg)==true){
-        return true;}else{return false;}
+{#    统计下载的JS#}
+<script type="text/javascript">
+        var i=0;
+        function countclick()
+        {
+           i++;
+           document.getElementById("dowanload_count").innerHTML=i+"";
         }
+ </script>
 
-        function p_mod() {
-        var msg="您真的确定要修改吗？";
-        if (confirm(msg)==true){
-        return true;}else{return false;}
-        }
+{#    #删除的JS#}
+<script type="text/javascript">
+$(function () {
+    bindDel();
+    bindDelConfirm();
 
-        {#function delcfm() {#}
-        {#        if (!confirm("确认要删除？")) {#}
-        {#            window.event.returnValue = false;#}
-        {#            return false;#}
-        {#        }#}
-        {#    }#}
+});
+    function bindDelConfirm() {
+        $('#delConfirm').click(function () {
+            var rowId = $('#delNid').val();
+            // console.log(rowId);
+            {#alert(rowId);#}
 
-        function post(url, params) {
-            var temp = document.createElement("form"); //创建form表单
-            temp.action = url;
-            temp.method = "post";
-            temp.style.display = "none";//表单样式为隐藏
-            for (var item in params) {//初始化表单内部的控件
-               //根据实际情况创建不同的标签元素
-                var opt =document.createElement("input");  //添加input标签
-                opt.type="text";   //类型为text
-                opt.id = item;      //设置id属性
-                opt.name = item;    //设置name属性
-                opt.value = params[item];   //设置value属性
-                temp.appendChild(opt);
-            }
+            $.ajax({
+                url: '/sharefile/delete_file/',
+                type: 'GET',
+                data: {'nid': rowId},
+                success:function (arg) {
+                    var dict = JSON.parse(arg);
+                    if(dict.status){
+                        window.location.reload();
+                        {#window.reload();#}
+                        {#$('tr[nid="'+ rowId+'"]').remove();#}
+                    }
+                    {#$('#delModal').modal('hide');#}
+                }
+            })
 
-            document.body.appendChild(temp);
-            temp.submit();
-            return temp;
-            }
+        });
+
+
+    }
+    function bindDel() {
+    $('.del-row').click(function () {
+        {#$('#myModaldell').modal('show');#}
+        // 回去当前行的ID
+        var rowId = $(this).parent().parent().parent().attr('nid');
+        $('#delNid').val(rowId);
+        {#alert(rowId)#}
+    })
+}
+
+
 
     </script>
 
