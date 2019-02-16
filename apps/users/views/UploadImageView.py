@@ -25,16 +25,25 @@ def Upload_image(request):
 
         # 获取数据库head_img字段的值，并切割成列表。
         # ['2018', '10', 'h2.png']
-        path = request.user.image.url.split('/')
+        # path = request.user.image.url.split('/')
+        # path = request.user.image.strip()
+        img_name = request.POST.get('img_name')
+        print(img_name)
         # 将列表的最后一个元素图片名称，替换成新的图片名称
-        path[-1] = request.POST.get('img_name')
-        # 再将列表合成一个字符串
-        path = '/'.join(path)
+        # path[-1] = request.POST.get('img_name')
+        #
+        # # 再将列表合成一个字符串
+        # path = '/'.join(path)
+        # print(path,'打印路径')
 
 
 
         # url = settings.MEDIA_ROOT
-        url = settings.MEDIA_ROOT +"/"+ path
+        # url = path
+        # url = "/"+ path
+        url = settings.MEDIA_ROOT +"/avatar/"+ img_name #Orignal one
+        # path = url
+        # url = settings.MEDIA_ROOT +"/"+ path #Orignal one
         # url = os.path.join('static/images/avatar', path)
 
         # 将ajax传过来的图片写入到本地/static/images/....目录下。
@@ -43,10 +52,10 @@ def Upload_image(request):
                 f.write(chunk)
 
         # 以上步骤实现了图片的后台保存，还需要修改当前用户数据库中的头像路径。
-        request.user.image = path
+        request.user.image = img
         request.user.save()
 
-        return HttpResponse('图片上传成功')
+        return HttpResponse('头像上传成功')
 
 
 

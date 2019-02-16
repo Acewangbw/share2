@@ -18,7 +18,7 @@ class UserProfile(AbstractUser):
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 头像 默认使用default.png
     image = models.ImageField(
-        upload_to="image/%Y/%m",
+        upload_to="avatar",
         default=u"image/default.png",
         max_length=100,
         verbose_name=u"头像"

@@ -13,14 +13,14 @@
            // {#alert('你切换图片了');#}
           //  {# 主要工作：获取选择的图片内容，读取内容，并将这个图片保存在图像上。 #}
            // {# files: 这个属性就是用来获取input所选择的内容。files[0]就是一个File对象，包含文件的名称、文件的大小、文件的类型等信息。 #}
-                alert('12')
+           //      alert('12')
                 var img_file = $('#input-file-now')[0].files[0];
 
          //   {# 从文件对象img_file中读取图片内容，首先要创建一个文件读取器。 #}
             var reader_file = new FileReader();
          //   {# 开始利用文件读取器从img_file中读取内容 #}
             reader_file.readAsDataURL(img_file);
-            alert(img_file)
+            // alert(img_file)
           //  {# 等图片读取完成，reader_file有一个读取成功的自动调用的回调事件 #}
             reader_file.onload = function (ev) {
                 $('#img-showAce').attr('src', ev.target.result);
