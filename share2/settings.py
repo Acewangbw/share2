@@ -16,7 +16,7 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
-sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -64,7 +64,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 ROOT_URLCONF = 'share2.urls'
 
 TEMPLATES = [
@@ -79,16 +78,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 "django.template.context_processors.i18n",
-                'django.template.context_processors.media',#用于图片URL引擎
+                'django.template.context_processors.media',  # 用于图片URL引擎
                 'django.template.context_processors.request',
             ],
         },
     },
 ]
 
-
 WSGI_APPLICATION = 'share2.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -97,17 +94,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'share2',
-        'USER':'root',
-        'PASSWORD':'a.123456',
-        'HOST':'127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': 'a.123456',
+        'HOST': '127.0.0.1',
         'OPTIONS': {
-            #'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            #'charset': 'utf8',
+            # 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            # 'charset': 'utf8',
             'sql_mode': 'traditional'
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -146,23 +142,109 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-#发送邮件的setting设置
+# 发送邮件的setting设置
 
 EMAIL_HOST = "smtp.qq.com"
 EMAIL_PORT = 25
 EMAIL_HOST_USER = "249340890@qq.com"
 EMAIL_HOST_PASSWORD = "occefqimmbarbjfi"
-EMAIL_USE_TLS= False
+EMAIL_USE_TLS = False
 # EMAIL_USE_TLS= True
 EMAIL_FROM = "249340890@qq.com"
-
 
 # 设置我们上传文件的路径
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 日志文件配置
+
+# 配置日志
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format': '%(levelname)s %(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'}
+        # 日志格式
+    },
+    'filters': {
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+        'default': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': './log/all.log',  # 日志输出文件
+            'maxBytes': 1024 * 1024 * 1024 * 5,  # 文件大小
+            'backupCount': 5,  # 备份份数
+            'formatter': 'standard',  # 使用哪种formatters日志格式
+        },
+        'error': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': './log/error.log',
+            'maxBytes': 1024 * 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+        'request_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': './log/script.log',
+            'maxBytes': 1024 * 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'scprits_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': './log/script.log',
+            'maxBytes': 1024 * 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['default', 'console'],
+            # 'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'django.request': {
+            'handlers': ['request_handler'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'scripts': {
+            'handlers': ['scprits_handler'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'apps': {
+            'handlers': ['default', 'console'],
+            # 'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+
+
+
+
+
+    }
+}

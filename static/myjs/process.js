@@ -6,17 +6,18 @@ $(function () {
     function approveprocess() {
 
         $('button[target="summbit"]').click(function (e) {
+            alert('测试进入Ace')
 
             var postData = {};
             var nid = $("#form_data").attr("name");
             var is_review = $(this).attr("name");
             postData['nid'] = nid;
             postData['is_review'] = is_review;
-            console.log(nid);
+            // console.log(nid);
             $("input[name='keyword']").each(function () {
                 var v = $(this).val();
                 var n = $(this).attr('name');
-                console.log("v",v);
+                // console.log("v",v);
                 if(v){
                     postData[n] = v;
                 }
@@ -27,8 +28,8 @@ $(function () {
 
 
 
-            console.log("postdata", postData);
-            alert(JSON.stringify(postData));
+            // console.log("postdata", postData);
+            // alert(JSON.stringify(postData));
             $.ajax({
                 url: '/sharefile/filedetail/', //需要更根据写的view对应的URL修改
                 type: 'POST',

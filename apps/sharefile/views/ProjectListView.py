@@ -29,7 +29,9 @@ class ProjectListView(View):
             print("查询所有的项目分类文件: ", all_file)
 
         countfile = len(all_file)
+        allproject = ProjectModel.objects.all()
         return render(request,'Ace-filelist-transaction-listing.html',{
             'allfile':all_file,
-            'countfile':countfile
+            'countfile':countfile,
+            'allproject':allproject
         })

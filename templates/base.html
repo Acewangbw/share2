@@ -148,6 +148,7 @@
 
                         </ul>
                     </li>
+                     {% if request.user.is_authenticated %}
                     <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
                             class="ti-bar-chart-alt"></i><span class="hide-menu">文件</span></a>
                         <ul aria-expanded="false" class="collapse">
@@ -158,6 +159,7 @@
                             {% endif %}
                         </ul>
                     </li>
+                    {% endif %}
                      <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-palette"></i>项目文件</a>
                             <ul aria-expanded="false" class="collapse">
 
@@ -271,8 +273,6 @@
     <!--stickey kit -->
     <script src="{% static 'node_modules/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
     <script src="{% static 'node_modules/sparkline/jquery.sparkline.min.js' %}"></script>
-    <!--Custom JavaScript -->
-    <script src="{% static 'js/custom.min.js' %}"></script>
     <!-- jQuery peity -->
     <script src="{% static 'node_modules/peity/jquery.peity.min.js' %}"></script>
     <script src="{% static 'node_modules/peity/jquery.peity.init.js' %}"></script>
@@ -282,8 +282,6 @@
     <!-- jQuery file upload -->
     <script src="{% static 'node_modules/dropify/dist/js/dropify.min.js' %}"></script>
     <script src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
-
-
 
 
 {% endblock %}

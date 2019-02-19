@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
-from repository.models import AddFileModel, U2D,File2DepModel
+from repository.models import AddFileModel, U2D, File2DepModel, ProjectModel
 from repository.models import UserProfile
 from utils.mixin_utils import LoginRequiredMixin
 
@@ -78,11 +78,12 @@ class FileListView(LoginRequiredMixin,View):
         countfile = len(allfile)
 
         # user_obj = UserProfile.objects.get(username=username)
-
+        allproject = ProjectModel.objects.all()
         return render(request,'Ace-filelist-transaction-listing.html',{
             'allfile':allfile,
             'countfile':countfile,
             'user_id':user_id,
+            'allproject':allproject,
             # 'file_all':file_all
         })
 

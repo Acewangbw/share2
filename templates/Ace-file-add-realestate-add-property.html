@@ -27,13 +27,35 @@
                                     <div class="form-group">
                                         <label for="plocation">文件名称</label>
                                         <input name="filename" type="text" class="form-control" id="plocation" placeholder="文件名称"> </div>
+
+
+{#                                       <div class="form-group">#}
+{#                                            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">#}
+{#                                                Button with data-target#}
+{#                                            </button>#}
+{#                                            <div class="collapse" id="collapseExample">#}
+{#                                                <div class="card card-body">#}
+{#                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                       </div>#}
+
+
+
+
+
+
+
+
+
+
                                     <div class="form-group">
                                         <label for="pname">使用部门</label>
 {#                                        <h5 class="m-t-20">Multiple select boxes</h5>#}
                                         <select name="dep" class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
                                             <optgroup label="请选择部门" name="deps">
                                                 {% for user_dept in dept %}
-                                                <option value="{{ user_dept.title }}">{{ user_dept.title }}</option>
+                                                <option value="{{ user_dept.title }}" >{{ user_dept.title }}</option>
                                                 {% endfor %}
                                             </optgroup>
                                         </select>

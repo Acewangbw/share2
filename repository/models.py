@@ -13,7 +13,7 @@ class UserProfile(AbstractUser):
 
     id = models.BigAutoField(primary_key=True)
 
-    nick_name = models.CharField(max_length=50, verbose_name=u"昵称")
+    nick_name = models.CharField(max_length=50, verbose_name=u"昵称", null=True)
 
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 头像 默认使用default.png
@@ -21,10 +21,11 @@ class UserProfile(AbstractUser):
         upload_to="avatar",
         default=u"image/default.png",
         max_length=100,
-        verbose_name=u"头像"
+        verbose_name=u"头像",
+        null=True
     )
     models_introdoction = models.TextField(max_length=128)
-    # 是否有权限 0 没有 1 有, 这里是设定用户是否有权限删除和下载。
+    # 是否有权限 0 没有 1 有, 这里是设定用户是否有权限删除和下载。 这里是控制用户上传权限的。
     is_admin = models.BooleanField(null=False, default=False)
 
     #这里是设定用户是否有审批权限。
@@ -157,7 +158,7 @@ class AddFileModel(models.Model):
     status = models.CharField(default=0, verbose_name="文件是否可以发布", max_length=1)
     models_Fileproject = models.ForeignKey(ProjectModel,on_delete=models.CASCADE,null=True,blank=True)
 
-    reason = models.CharField(default="无", max_length=100, verbose_name="审核理由")
+    reason = models.CharField(default="无", max_length=100, verbose_name="审核理由",null=True)
     # upload_by = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
 
 

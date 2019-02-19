@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import logging
+
 from django.contrib import admin
 from django.urls import path, include, re_path
 
@@ -31,21 +33,18 @@ import xadmin
 
 # 用于设定图片URL地址
 from django.views.static import serve
-#配件添加图片URL时用到的
+# 配件添加图片URL时用到的
 from .settings import MEDIA_ROOT
-
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
 
-    #主页
+    # 主页
     re_path(r'^$', Index.as_view(), name="index"),
 
     path('index/', Index.as_view(), name="index"),
     path('test/', testview.as_view(), name="test"),
-
-
 
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name='logout'),
@@ -58,12 +57,10 @@ urlpatterns = [
     # 修改密码url; 用于passwordreset页面提交表单, 用于点击来链接里面提交密码。
     path('modify_pwd/', ModifyPwdView.as_view(), name="modify_pwd"),
 
-
     # 验证码url
     path("captcha/", include('captcha.urls')),
     # 激活用户url
     re_path('active/(?P<active_code>.*)/', ActiveUserView.as_view(), name="user_active"),
-
 
     # sharefile的URL
     path("sharefile/", include('sharefile.urls', namespace='sharefile')),

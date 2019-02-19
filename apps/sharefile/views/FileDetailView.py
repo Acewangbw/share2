@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
 _author_ = 'Ace'
 _date_ = '2019-02-02 13:54'
@@ -47,9 +47,10 @@ class FileDetailView(LoginRequiredMixin,View):
         file_obj.reason = reason
         file_obj.status = status
         file_obj.save()
+        print('审批结束')
 
-
-        return redirect('/')
+        return HttpResponseRedirect('/')
+        # return redirect('/')
         # return render(request, "index.html")
 
 

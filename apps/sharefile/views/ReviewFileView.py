@@ -29,6 +29,7 @@ class ReviewFileView(View):
 
         # 查询所有未审核和未通过的文件
         all_file = AddFileModel.objects.filter(~Q(status=1) & Q(models_Filetype_type_id=1))
+        # all_file = AddFileModel.objects.filter(~Q(status=1) & Q(models_Filetype_type_id=1))
 
         #Ace - processlist - table - basic.html
 
@@ -36,7 +37,7 @@ class ReviewFileView(View):
             'allfile': all_file
         })
 
-
-    def post(self, request):
-
-        pass
+    #
+    # def post(self, request):
+    #
+    #     pass
