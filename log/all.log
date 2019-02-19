@@ -1030,36 +1030,382 @@ DEBUG 2019-02-19 11:19:08,578 [Dummy-1:2256] [django.db.backends:111] [utils:exe
 DEBUG 2019-02-19 11:19:08,683 [Dummy-1:2256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
 DEBUG 2019-02-19 11:19:08,687 [Dummy-1:2256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
 DEBUG 2019-02-19 11:19:08,694 [Dummy-1:2256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2019-02-19 11:19:25,973 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-DEBUG 2019-02-19 11:19:25,973 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-DEBUG 2019-02-19 11:19:25,974 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT VERSION(); args=None
-DEBUG 2019-02-19 11:19:26,078 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-DEBUG 2019-02-19 11:19:26,080 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
-DEBUG 2019-02-19 11:19:26,086 [Dummy-1:14332] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2019-02-19 11:19:37,792 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-DEBUG 2019-02-19 11:19:37,793 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-DEBUG 2019-02-19 11:19:37,794 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
-DEBUG 2019-02-19 11:19:37,803 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-DEBUG 2019-02-19 11:19:37,805 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '0u5rozh3lc5qezdhht6wcg9rg9gi21ko' AND `django_session`.`expire_date` > '2019-02-19 11:19:37.785173'); args=('0u5rozh3lc5qezdhht6wcg9rg9gi21ko', '2019-02-19 11:19:37.785173')
-DEBUG 2019-02-19 11:19:37,814 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
-INFO 2019-02-19 11:19:37,815 [Thread-2:10224] [django:60] [AddfileView:post] [INFO]- user
-DEBUG 2019-02-19 11:19:37,818 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1 LIMIT 1; args=(1,)
-DEBUG 2019-02-19 11:19:37,862 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:37,868 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:37,870 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:37,875 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
-INFO 2019-02-19 11:19:37,887 [Thread-2:10224] [django:78] [AddfileView:post] [INFO]- 添加文件
-INFO 2019-02-19 11:19:37,888 [Thread-2:10224] [django:79] [AddfileView:post] [INFO]- ********************
-INFO 2019-02-19 11:19:37,889 [Thread-2:10224] [django:80] [AddfileView:post] [INFO]- <QueryDict: {'filename': ['部门测试'], 'filedes': ['呃 '], 'filetype': ['内部'], 'fileproject': ['测试项目1'], 'csrfmiddlewaretoken': ['vCNOoy0BKofy58bbWKpSIvXLtMEXjhuC3jDpN0QNMmfZ7HKcUzHxBYkPltIWP90y']}>
-DEBUG 2019-02-19 11:19:37,908 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 1; args=(1,)
-DEBUG 2019-02-19 11:19:37,917 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:37,926 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:37,927 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`Project_name` = '测试项目1'; args=('测试项目1',)
-INFO 2019-02-19 11:19:37,947 [Thread-2:10224] [django:127] [AddfileView:post] [INFO]- 1
-DEBUG 2019-02-19 11:19:37,956 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) INSERT INTO `repository_addfilemodel` (`models_Filename`, `models_Filedes`, `read_count`, `models_Fileupload`, `create_time`, `department_id`, `user_id_id`, `models_Filetype_type_id`, `status`, `models_Fileproject_id`, `reason`) VALUES ('部门测试', '呃 ', 0, 'file/2019/02/Login_KZt4g74.png', '2019-02-19 11:19:37.955251', NULL, 1, 2, '0', 1, '无'); args=['部门测试', '呃 ', 0, 'file/2019/02/Login_KZt4g74.png', '2019-02-19 11:19:37.955251', None, 1, 2, '0', 1, '无']
-DEBUG 2019-02-19 11:19:38,106 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:38,151 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:38,153 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:38,155 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
-DEBUG 2019-02-19 11:19:38,156 [Thread-2:10224] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`nid` = 1 LIMIT 21; args=(1,)
-ERROR 2019-02-19 11:19:39,228 [Thread-2:10224] [django.server:124] [basehttp:log_message] [ERROR]- "POST /sharefile/addfile/ HTTP/1.1" 500 111524
+DEBUG 2019-02-19 11:30:22,214 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2019-02-19 11:30:22,215 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:22,215 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+DEBUG 2019-02-19 11:30:22,317 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:22,319 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
+DEBUG 2019-02-19 11:30:22,326 [Dummy-1:20740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2019-02-19 11:30:42,090 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2019-02-19 11:30:42,090 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:42,091 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT VERSION(); args=None
+DEBUG 2019-02-19 11:30:42,094 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:42,095 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '0u5rozh3lc5qezdhht6wcg9rg9gi21ko' AND `django_session`.`expire_date` > '2019-02-19 11:30:42.085822'); args=('0u5rozh3lc5qezdhht6wcg9rg9gi21ko', '2019-02-19 11:30:42.085822')
+DEBUG 2019-02-19 11:30:42,101 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:42,147 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` LIMIT 21; args=()
+DEBUG 2019-02-19 11:30:42,149 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` LIMIT 21; args=()
+DEBUG 2019-02-19 11:30:42,153 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` LIMIT 21; args=()
+DEBUG 2019-02-19 11:30:42,155 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` LIMIT 21; args=()
+DEBUG 2019-02-19 11:30:42,247 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep`; args=()
+DEBUG 2019-02-19 11:30:42,248 [Thread-2:22256] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel`; args=()
+INFO 2019-02-19 11:30:42,253 [Thread-2:22256] [django.server:124] [basehttp:log_message] [INFO]- "GET /sharefile/addfile/ HTTP/1.1" 200 22974
+DEBUG 2019-02-19 11:30:42,593 [Thread-3:14888] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (xadmin:xadmin) 'xadmin/'>], [<URLPattern '^$' [name='index']>], [<URLPattern 'index/' [name='index']>], [<URLPattern 'test/' [name='test']>], [<URLPattern 'login/' [name='login']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'register/' [name='register']>], [<URLPattern 'forget/' [name='forget_pwd']>], [<URLPattern 'reset/(?P<active_code>.*)/' [name='reset_pwd']>], [<URLPattern 'modify_pwd/' [name='modify_pwd']>], [<URLResolver <module 'captcha.urls' from 'C:\\Python\\Webproject\\share2\\env\\lib\\site-packages\\captcha\\urls.py'> (None:None) 'captcha/'>], [<URLPattern 'active/(?P<active_code>.*)/' [name='user_active']>], [<URLResolver <module 'sharefile.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\sharefile\\urls.py'> (sharefile:sharefile) 'sharefile/'>], [<URLResolver <module 'users.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\users\\urls.py'> (users:users) 'users/'>], [<URLPattern 'media/(?P<path>.*)$'>]], 'path': 'assets/images/custom-select.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (xadmin:xadmin) 'xadmin/'>
+DEBUG 2019-02-19 11:30:42,597 [Thread-3:14888] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (xadmin:xadmin) 'xadmin/'>], [<URLPattern '^$' [name='index']>], [<URLPattern 'index/' [name='index']>], [<URLPattern 'test/' [name='test']>], [<URLPattern 'login/' [name='login']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'register/' [name='register']>], [<URLPattern 'forget/' [name='forget_pwd']>], [<URLPattern 'reset/(?P<active_code>.*)/' [name='reset_pwd']>], [<URLPattern 'modify_pwd/' [name='modify_pwd']>], [<URLResolver <module 'captcha.urls' from 'C:\\Python\\Webproject\\share2\\env\\lib\\site-packages\\captcha\\urls.py'> (None:None) 'captcha/'>], [<URLPattern 'active/(?P<active_code>.*)/' [name='user_active']>], [<URLResolver <module 'sharefile.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\sharefile\\urls.py'> (sharefile:sharefile) 'sharefile/'>], [<URLResolver <module 'users.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\users\\urls.py'> (users:users) 'users/'>], [<URLPattern 'media/(?P<path>.*)$'>]], 'path': 'assets/images/custom-select.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'captcha.urls' from 'C:\\Python\\Webproject\\share2\\env\\lib\\site-packages\\captcha\\urls.py'> (None:None) 'captcha/'>
+DEBUG 2019-02-19 11:30:42,606 [Thread-3:14888] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (xadmin:xadmin) 'xadmin/'>], [<URLPattern '^$' [name='index']>], [<URLPattern 'index/' [name='index']>], [<URLPattern 'test/' [name='test']>], [<URLPattern 'login/' [name='login']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'register/' [name='register']>], [<URLPattern 'forget/' [name='forget_pwd']>], [<URLPattern 'reset/(?P<active_code>.*)/' [name='reset_pwd']>], [<URLPattern 'modify_pwd/' [name='modify_pwd']>], [<URLResolver <module 'captcha.urls' from 'C:\\Python\\Webproject\\share2\\env\\lib\\site-packages\\captcha\\urls.py'> (None:None) 'captcha/'>], [<URLPattern 'active/(?P<active_code>.*)/' [name='user_active']>], [<URLResolver <module 'sharefile.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\sharefile\\urls.py'> (sharefile:sharefile) 'sharefile/'>], [<URLResolver <module 'users.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\users\\urls.py'> (users:users) 'users/'>], [<URLPattern 'media/(?P<path>.*)$'>]], 'path': 'assets/images/custom-select.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'sharefile.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\sharefile\\urls.py'> (sharefile:sharefile) 'sharefile/'>
+DEBUG 2019-02-19 11:30:42,609 [Thread-3:14888] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (xadmin:xadmin) 'xadmin/'>], [<URLPattern '^$' [name='index']>], [<URLPattern 'index/' [name='index']>], [<URLPattern 'test/' [name='test']>], [<URLPattern 'login/' [name='login']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'register/' [name='register']>], [<URLPattern 'forget/' [name='forget_pwd']>], [<URLPattern 'reset/(?P<active_code>.*)/' [name='reset_pwd']>], [<URLPattern 'modify_pwd/' [name='modify_pwd']>], [<URLResolver <module 'captcha.urls' from 'C:\\Python\\Webproject\\share2\\env\\lib\\site-packages\\captcha\\urls.py'> (None:None) 'captcha/'>], [<URLPattern 'active/(?P<active_code>.*)/' [name='user_active']>], [<URLResolver <module 'sharefile.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\sharefile\\urls.py'> (sharefile:sharefile) 'sharefile/'>], [<URLResolver <module 'users.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\users\\urls.py'> (users:users) 'users/'>], [<URLPattern 'media/(?P<path>.*)$'>]], 'path': 'assets/images/custom-select.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'users.urls' from 'C:\\Python\\Webproject\\share2\\share2\\share2\\apps\\users\\urls.py'> (users:users) 'users/'>
+WARNING 2019-02-19 11:30:42,621 [Thread-3:14888] [django.server:124] [basehttp:log_message] [WARNING]- "GET /assets/images/custom-select.png HTTP/1.1" 404 3763
+INFO 2019-02-19 11:30:42,698 [Thread-4:11260] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/images/favicon.png HTTP/1.1" 200 1347
+DEBUG 2019-02-19 11:30:50,734 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2019-02-19 11:30:50,736 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:50,737 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+DEBUG 2019-02-19 11:30:50,741 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:50,742 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '0u5rozh3lc5qezdhht6wcg9rg9gi21ko' AND `django_session`.`expire_date` > '2019-02-19 11:30:50.729334'); args=('0u5rozh3lc5qezdhht6wcg9rg9gi21ko', '2019-02-19 11:30:50.729334')
+DEBUG 2019-02-19 11:30:50,745 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+INFO 2019-02-19 11:30:50,746 [Thread-5:21884] [django:60] [AddfileView:post] [INFO]- user
+DEBUG 2019-02-19 11:30:50,750 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1 LIMIT 1; args=(1,)
+DEBUG 2019-02-19 11:30:50,896 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
+DEBUG 2019-02-19 11:30:50,903 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
+DEBUG 2019-02-19 11:30:50,905 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
+DEBUG 2019-02-19 11:30:50,910 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 21; args=(1,)
+INFO 2019-02-19 11:30:50,929 [Thread-5:21884] [django:78] [AddfileView:post] [INFO]- 添加文件
+INFO 2019-02-19 11:30:50,930 [Thread-5:21884] [django:79] [AddfileView:post] [INFO]- ********************
+INFO 2019-02-19 11:30:50,932 [Thread-5:21884] [django:80] [AddfileView:post] [INFO]- <QueryDict: {'filename': ['123'], 'dep': ['信息部'], 'filedes': ['123'], 'filetype': ['内部'], 'fileproject': ['测试项目1'], 'csrfmiddlewaretoken': ['hEdxT4LzxuUMOiyuD0Sd0VwkSP0sQCSC4WOhLM7x6CYpehiFctPh3m02nFjfoun9']}>
+DEBUG 2019-02-19 11:30:50,944 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`title` = '信息部' LIMIT 21; args=('信息部',)
+DEBUG 2019-02-19 11:30:50,946 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`title` = '信息部' LIMIT 21; args=('信息部',)
+INFO 2019-02-19 11:30:50,943 [Thread-5:21884] [django:102] [AddfileView:post] [INFO]- <QuerySet [<Dep: 信息部>]>
+DEBUG 2019-02-19 11:30:50,948 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`title` = '信息部' LIMIT 21; args=('信息部',)
+DEBUG 2019-02-19 11:30:50,950 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_dep`.`nid`, `repository_dep`.`title` FROM `repository_dep` WHERE `repository_dep`.`title` = '信息部' LIMIT 1; args=('信息部',)
+DEBUG 2019-02-19 11:30:50,978 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`Project_name` = '测试项目1'; args=('测试项目1',)
+INFO 2019-02-19 11:30:50,999 [Thread-5:21884] [django:127] [AddfileView:post] [INFO]- 1
+DEBUG 2019-02-19 11:30:51,009 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) INSERT INTO `repository_addfilemodel` (`models_Filename`, `models_Filedes`, `read_count`, `models_Fileupload`, `create_time`, `department_id`, `user_id_id`, `models_Filetype_type_id`, `status`, `models_Fileproject_id`, `reason`) VALUES ('123', '123', 0, 'file/2019/02/Login_r9TN4PI.png', '2019-02-19 11:30:51.007570', NULL, 1, 2, '0', 1, '无'); args=['123', '123', 0, 'file/2019/02/Login_r9TN4PI.png', '2019-02-19 11:30:51.007570', None, 1, 2, '0', 1, '无']
+DEBUG 2019-02-19 11:30:51,098 [Thread-5:21884] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) INSERT INTO `repository_file2depmodel` (`file_id`, `dep_id`) VALUES (81, 2); args=[81, 2]
+INFO 2019-02-19 11:30:51,132 [Thread-5:21884] [django.server:124] [basehttp:log_message] [INFO]- "POST /sharefile/addfile/ HTTP/1.1" 302 0
+DEBUG 2019-02-19 11:30:51,237 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2019-02-19 11:30:51,238 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:51,240 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT VERSION(); args=None
+DEBUG 2019-02-19 11:30:51,244 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-02-19 11:30:51,246 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '0u5rozh3lc5qezdhht6wcg9rg9gi21ko' AND `django_session`.`expire_date` > '2019-02-19 11:30:51.232168'); args=('0u5rozh3lc5qezdhht6wcg9rg9gi21ko', '2019-02-19 11:30:51.232168')
+DEBUG 2019-02-19 11:30:51,249 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,255 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_u2d`.`id`, `repository_u2d`.`user_id`, `repository_u2d`.`dep_id` FROM `repository_u2d` WHERE `repository_u2d`.`user_id` = 1 LIMIT 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,258 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_file2depmodel`.`id`, `repository_file2depmodel`.`file_id`, `repository_file2depmodel`.`dep_id` FROM `repository_file2depmodel` WHERE `repository_file2depmodel`.`dep_id` = 1 LIMIT 21; args=(1,)
+DEBUG 2019-02-19 11:30:51,260 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_file2depmodel`.`id`, `repository_file2depmodel`.`file_id`, `repository_file2depmodel`.`dep_id` FROM `repository_file2depmodel` WHERE `repository_file2depmodel`.`dep_id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,274 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel`; args=()
+DEBUG 2019-02-19 11:30:51,288 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 10; args=(10,)
+DEBUG 2019-02-19 11:30:51,289 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (1)>
+DEBUG 2019-02-19 11:30:51,292 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 6; args=(6,)
+DEBUG 2019-02-19 11:30:51,294 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,297 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 11; args=(11,)
+DEBUG 2019-02-19 11:30:51,298 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (4)>
+DEBUG 2019-02-19 11:30:51,304 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 6; args=(6,)
+DEBUG 2019-02-19 11:30:51,307 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,310 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 22; args=(22,)
+DEBUG 2019-02-19 11:30:51,311 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (17)>
+DEBUG 2019-02-19 11:30:51,315 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,317 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,322 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 23; args=(23,)
+DEBUG 2019-02-19 11:30:51,322 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (18)>
+DEBUG 2019-02-19 11:30:51,326 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,328 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,331 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 48; args=(48,)
+DEBUG 2019-02-19 11:30:51,331 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (19)>
+DEBUG 2019-02-19 11:30:51,337 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,340 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,342 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_addfilemodel`.`nid`, `repository_addfilemodel`.`models_Filename`, `repository_addfilemodel`.`models_Filedes`, `repository_addfilemodel`.`read_count`, `repository_addfilemodel`.`models_Fileupload`, `repository_addfilemodel`.`create_time`, `repository_addfilemodel`.`department_id`, `repository_addfilemodel`.`user_id_id`, `repository_addfilemodel`.`models_Filetype_type_id`, `repository_addfilemodel`.`status`, `repository_addfilemodel`.`models_Fileproject_id`, `repository_addfilemodel`.`reason` FROM `repository_addfilemodel` WHERE `repository_addfilemodel`.`nid` = 48; args=(48,)
+DEBUG 2019-02-19 11:30:51,343 [Thread-6:13196] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'models_Filedes' in template 'Ace-filelist-transaction-listing.html'.
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'File2DepModel' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'File2DepModel' object has no attribute 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'models_Filedes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Webproject\share2\env\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [models_Filedes] in <File2DepModel: File2DepModel object (20)>
+DEBUG 2019-02-19 11:30:51,346 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_userprofile`.`password`, `repository_userprofile`.`last_login`, `repository_userprofile`.`is_superuser`, `repository_userprofile`.`username`, `repository_userprofile`.`first_name`, `repository_userprofile`.`last_name`, `repository_userprofile`.`email`, `repository_userprofile`.`is_staff`, `repository_userprofile`.`is_active`, `repository_userprofile`.`date_joined`, `repository_userprofile`.`id`, `repository_userprofile`.`nick_name`, `repository_userprofile`.`create_time`, `repository_userprofile`.`image`, `repository_userprofile`.`models_introdoction`, `repository_userprofile`.`is_admin`, `repository_userprofile`.`is_approver` FROM `repository_userprofile` WHERE `repository_userprofile`.`id` = 1; args=(1,)
+DEBUG 2019-02-19 11:30:51,348 [Thread-6:13196] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `repository_projectmodel`.`nid`, `repository_projectmodel`.`Project_name` FROM `repository_projectmodel` WHERE `repository_projectmodel`.`nid` = 1; args=(1,)
+INFO 2019-02-19 11:30:51,354 [Thread-6:13196] [django.server:124] [basehttp:log_message] [INFO]- "GET /sharefile/filelist/ HTTP/1.1" 200 41972
