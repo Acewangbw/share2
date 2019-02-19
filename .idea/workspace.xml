@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64f014ae-e219-46d1-9093-37582b75d3d2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/log/all.log" afterPath="$PROJECT_DIR$/log/all.log" />
-      <change beforePath="$PROJECT_DIR$/log/script.log" afterPath="$PROJECT_DIR$/log/script.log" />
-      <change beforePath="$PROJECT_DIR$/media/file/2019/02/Login_KZt4g74.png" afterPath="$PROJECT_DIR$/media/file/2019/02/Login_r9TN4PI.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +76,8 @@
       <file leaf-file-name="AddfileView.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/sharefile/views/AddfileView.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="148" column="79" lean-forward="true" selection-start-line="148" selection-start-column="79" selection-end-line="148" selection-end-column="79" />
+            <state relative-caret-position="1873">
+              <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
                 <element signature="e#806#807#0" expanded="false" />
@@ -475,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550546912754</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Feb19">
+      <created>1550547161668</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550547161668</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1055,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/sharefile/views/AddfileView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="148" column="79" lean-forward="true" selection-start-line="148" selection-start-column="79" selection-end-line="148" selection-end-column="79" />
+        <state relative-caret-position="1873">
+          <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
             <element signature="e#806#807#0" expanded="false" />
